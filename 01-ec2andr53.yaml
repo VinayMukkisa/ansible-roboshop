@@ -3,6 +3,7 @@
   become: yes
   connection: local
   vars:
+    ansible_python_interpreter: /usr/bin/python3
     ami_id: ami-0220d79f3f480ecf5
     sg_id: sg-08ab4d82756ecaa18 # replace with your SG ID
     zone_id: "Z03213491OV18327UWTE0" # replace with your route53 zone ID
