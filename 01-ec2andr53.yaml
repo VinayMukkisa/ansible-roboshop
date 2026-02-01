@@ -8,6 +8,7 @@
     sg_id: sg-08ab4d82756ecaa18 # replace with your SG ID
     zone_id: "Z03213491OV18327UWTE0" # replace with your route53 zone ID
     domain_name: "countryroot.fun"
+    region: us-east-1
     instances:
       - mongodb
   tasks: 
@@ -16,9 +17,11 @@
       name: "{{ item }}"
       instance_type: t3.micro
       security_group: "{{ sg_id }}"
+      region: "{{ region }}"
       image_id: "{{ ami_id }}"
       tags:
         Name: "{{ item }}"
     loop: "{{ instances }}"
     register: ec2_instance
+  
   
