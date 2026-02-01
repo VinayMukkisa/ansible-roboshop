@@ -3,7 +3,7 @@
   connection: local
   vars:
     ansible_python_interpreter: /usr/bin/python3
-    region: ap-south-1
+    region: us-east-1
     ami_id: ami-0220d79f3f480ecf5
     sg_id: sg-08ab4d82756ecaa18
     zone_id: "Z03213491OV18327UWTE0"
